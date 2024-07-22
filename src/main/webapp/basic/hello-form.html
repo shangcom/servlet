@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="/request-param" method="post">
+    username: <input type="text" name="username"/>
+    age: <input type="text" name="age"/>
+    <button type="submit">전송</button>
+</form>
+</body>
+</html>
+
+<!--http://localhost:8080/basic/hello-form.html-->
+<!--위 주소로 요청하면 현재 html 페이지 나온다. 여기에서 1차적으로 request와 response 객체가 만들어진 것이고, response 객체에는
+현재 파일의 html이 responsebody에 담겨서 브라우저로 보내어진다.
+이렇게 로드된 페이지에서 username과 age를 입력하여 전송을 누르면 다시 이전과 별개로 request와 response 객체가 만들어지고,
+request 객체의 payload로 username과 age의 value가 들어간다. 그리고 response로는 RequestParanServlet에서 설정해둔 "OK"가 나온다.
+즉, 처음 html 페이지에 대한 요청과 응답, 그리고 이후 제출을 통한 요청과 응답 객체는 별개이다.-->
+<!--또한 http 요청 메시지를 만드는 것은 브라우저이며, 웹 애플리케이션(서버)는 이 메시지를 만들기 위한 틀(html)을 제공할 뿐이다.-->
