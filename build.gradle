@@ -28,6 +28,14 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 //	implementation 'org.springframework.boot:spring-boot-devtools'
 
+	// Spring Boot와 같은 임베디드(embedded) 톰캣 환경에서 JSP를 지원
+	implementation 'org.apache.tomcat.embed:tomcat-embed-jasper'
+	// jakarta.servlet:jakarta.servlet-api는 없어도 된다. 내장 톰캣이 이미 가지고 있음.
+
+	// JSTL API and implementation : JSTL 인터페이스(jstl-api)와 구현체(jstl) 둘 다 필요함.
+	implementation 'jakarta.servlet.jsp.jstl:jakarta.servlet.jsp.jstl-api'
+	implementation 'org.glassfish.web:jakarta.servlet.jsp.jstl'
+
 	compileOnly 'org.projectlombok:lombok'
 	annotationProcessor 'org.projectlombok:lombok'
 	providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
